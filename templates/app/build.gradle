@@ -1,0 +1,103 @@
+buildscript {
+	ext.kotlinVersion = '1.0.3'
+	repositories {
+		jcenter()
+		maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:1.5.0'
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+	}
+}
+
+allprojects {
+	repositories {
+		jcenter()
+		maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+		maven { url 'https://jitpack.io' }
+	}
+}
+
+ext {
+	//////////////////////////////////////////////////
+	// VERSIONS
+
+	// Android
+
+	androidBuildToolsVersion = '23.0.3'
+	androidCompileSdkVersion = 23
+	androidMinSdkVersion = 19
+	androidTargetSdkVersion = 23
+
+	// Desktop
+
+	// Libraries
+
+	androidSupportVersion = '23.2.1'
+	daggerVersion = '2.0.2'
+	flowVersion = '1.0.0-alpha'
+	javaxAnnotationVersion = '10.0-b28'
+	javaxInjectVersion = '1'
+	kotlinVersion = '1.0.1'
+	kotterKnifeVersion = '0.1.0-SNAPSHOT'
+	mortarVersion = '0.20'
+	okHttpVersion = '3.2.0'
+	paperParcelVersion = '1.0.0-beta8'
+	phraseVersion = '1.1.0'
+	retrofitVersion = '2.0.0'
+	rxAndroidVersion = '1.1.0'
+	rxBindingVersion = '0.4.0'
+	rxJavaVersion = '1.1.1'
+
+	// Testing
+
+	assertJVersion = '1.7.1'
+	jUnitVersion = '4.12'
+	mockitoVersion = '1.10.5'
+
+	//////////////////////////////////////////////////
+	// DEPENDENCIES
+
+	// Android
+
+	androidSupport = "com.android.support:support-v4:$androidSupportVersion"
+	androidSupportAnnotations = "com.android.support:support-annotations:$androidSupportVersion"
+	androidSupportAppCompat = "com.android.support:appcompat-v7:$androidSupportVersion"
+	androidSupportDesign = "com.android.support:design:$androidSupportVersion"
+	androidSupportRecyclerView = "com.android.support:recyclerview-v7:$androidSupportVersion"
+
+	// Desktop
+
+	// Third-party
+	dagger = "com.google.dagger:dagger:$daggerVersion"
+	daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
+	flow = "com.squareup.flow:flow:$flowVersion"
+	javaxAnnotation = "org.glassfish:javax.annotation:$javaxAnnotationVersion"
+	javaxInject = "javax.inject:javax.inject:$javaxInjectVersion"
+	kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+	kotterKnife = "com.jakewharton:kotterknife:$kotterKnifeVersion"
+	mortar = "com.squareup.mortar:mortar:$mortarVersion"
+	okHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+	paperParcel = "com.github.grandstaish.paperparcel:paperparcel-kotlin:$paperParcelVersion"
+	paperParcelCompiler = "com.github.grandstaish.paperparcel:compiler:$paperParcelVersion"
+	phrase = "com.squareup.phrase:phrase:$phraseVersion"
+	retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+	retrofitAdapterRxJava = "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+	retrofitConverterMoshi = "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+	rxAndroid = "io.reactivex:rxandroid:$rxAndroidVersion"
+	rxBinding = "com.jakewharton.rxbinding:rxbinding-kotlin:$rxBindingVersion"
+	rxBindingDesign = "com.jakewharton.rxbinding:rxbinding-design-kotlin:$rxBindingVersion"
+	rxBindingSupportV4 = "com.jakewharton.rxbinding:rxbinding-support-v4-kotlin:$rxBindingVersion"
+	rxBindingAppCompatV7 = "com.jakewharton.rxbinding:rxbinding-appcompat-v7-kotlin:$rxBindingVersion"
+	rxJava = "io.reactivex:rxjava:$rxJavaVersion"
+
+	reduxKotlin = "com.github.pardom:redux-kotlin:-SNAPSHOT"
+	reduxLoggerKotlin = "com.github.pardom:redux-logger-kotlin:-SNAPSHOT"
+	reduxObservableKotlin = "com.github.pardom:redux-observable-kotlin:-SNAPSHOT"
+
+	// Testing
+
+	assertJ = "org.assertj:assertj-core:$assertJVersion"
+	jUnit = "junit:junit:$jUnitVersion"
+	mockito = "org.mockito:mockito-core:$mockitoVersion"
+}

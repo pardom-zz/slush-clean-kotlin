@@ -1,0 +1,24 @@
+{
+    "name": "slush-clean-kotlin",
+    "version": "1.0.0",
+    "description": "Scaffolding for Clean Architecture Kotlin project.",
+    "main": "slushfile.js",
+    "keywords": [
+        "slushgenerator"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pardom/slush-clean-kotlin"
+    },
+    "dependencies": {
+        "slush": ">=1.0.0",
+        "gulp": "^3.6.2",
+        "gulp-template": "^0.1.1",
+        "gulp-conflict": "^0.1.1",
+        "gulp-rename": "^1.2.0",
+        "underscore.string": "^2.3.3",
+        "inquirer": "^0.8.0"
+    },
+    "author": "Michael Pardo",
+    "license": "Apache-2.0"
+}
